@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- head start -->
+
+<head>
+    <title>Sign Up | InCircle. ERP Made Easy</title>
+    <link rel="SHORTCUT ICON" href="static/images/favicon.ico" />
+    <!-- Meta tags start -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="description" content="A nice HTML5 InCircle ERP App, everyday tasks made easy" />
+    <meta name="keywords" content="InCircle, Incricle login, web based ERP platform, html5 ERP platform, best ERP platform, best web ERP platform, InCircle InCircle, iSource" />
+    <meta name="InCircle by InCircle" content="app-id=com.IncCirle.frame, app-argument=https://itunes.apple.com/in/app/Incircle/id1124408790?mt=8">
+    <!-- Style sheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/Redesign.css">
+    <!-- Js files -->
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--         <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+    <script src="static/js/main-script.js"></script>
+</head>
+<!-- head end -->
+<!-- body start -->
+
+<body style="background-color:#EFEFEF">
+    <div id="overlay">
+        <img src="static/images/fidget-spinner.gif" alt="Loading" id="loading" height="150px;" />
+    </div>
+
+    <form id='msSignup' class="row top-buffer" method="post">
+        <h1 class="row top-buffer">WELCOME TO ERP</h1>
+
+        <!-- fieldsets -->
+        <fieldset id="first">
+
+            <h1 class="fs-title">Perosnal Profile</h1>
+            <h3 class="fs-subtitle">Your personal  details</h3>
+            <input type="text" name="Fname" placeholder="Fist Name" />
+            <input type="text" name="Mname" placeholder="Middle Name" />
+            <input type="text" name="Lname" placeholder="Last Name" />
+            <input type="text" name="Moname" placeholder="Mother Name" />
+            <input type="date" name="bday" placeholder=" Birthday" />
+            <input type="button" name="next" class="next action-button" id="btnStep1" onclick="nxtStep1()" value="Next" />
+        </fieldset>
+        <fieldset id="second">
+            <h2 class="fs-title">KYC Profile</h2>
+            <h3 class="fs-subtitle">Let it be Official </h3>
+            <input type="numeric" name="Pan" placeholder="PAN number" onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+            <input type="text" name="Aadhar" placeholder="AADHAR number" onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+            <input type="text" name="Voter" placeholder="Voter-ID number" onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+            <input type="button" name="previous" onclick="prevStep1()" id="btnPre1" class="previous action-button" value="Previous" />
+            <input type="button" name="next" class="next action-button" id="btnStep2" onclick="nxtStep2()" value="Next" />
+        </fieldset>
+        <fieldset id="third">
+            <h2 class="fs-title">Social Profile</h2>
+            <h3 class="fs-subtitle">Lets connect social </h3>
+            <input type="numeric" name="mobile" placeholder="Mobile number" onkeypress='return event.charCode >= 48 && event.charCode <= 57' />
+            <input type="email" name="email" placeholder="Email address" />
+            <hr>
+            <input type="text" name="twitter" placeholder="Twitter" />
+            <input type="text" name="facebook" placeholder="Facebook" />
+            <input type="text" name="gplus" placeholder="Google Plus" />
+            <input type="text" name="skype" placeholder="Skype Id" />
+            <input type="button" name="previous" id="btnpre2" onclick="prevStep2()" class="previous action-button" value="Previous" />
+            <input type="button" name="submit" class="submit action-button" value="Submit" onclick="nxtStep3()" />
+        </fieldset>
+        <fieldset id="fourth">
+            <div id=error_text></div>
+            <p id="Register_alert" style=" display: none"><img src="static/images/loading_small.gif" style="padding-left: 30px;height: 30px;">&nbsp;&nbsp;Hold on for a while, submitting your request</p>
+            <!--    <h3 class="fs-subtitle" id='Register_alert'></h3>-->
+            <input type="submit" name="submit" id='btnDone' class="submit action-button" value="DONE" />
+        </fieldset>
+        <div style="margin-top: 20px" id="stepCircles">
+            <span class="step"></span>
+            <span class="step"></span>
+            <span class="step"></span>
+        </div>
+
+    </form>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            height: 100%;
+        }
+        
+        #msSignup {
+            width: 750px;
+            margin: 50px auto;
+            text-align: center;
+            position: relative;
+        }
+        
+        #second,
+        #third,
+        #fourth {
+            background: white;
+            display: none;
+            border: 0 none;
+            border-radius: 3px;
+            box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+            padding: 20px 30px;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0 10%;
+            /*stacking fieldsets above each other*/
+            position: relative;
+        }
+        
+        #first {
+            background: white;
+            display: block;
+            border: 0 none;
+            border-radius: 3px;
+            box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+            padding: 20px 30px;
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0 10%;
+            /*stacking fieldsets above each other*/
+            position: relative;
+        }
+        
+        #msSignup input,
+        #msSignup textarea {
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            color: #2C3E50;
+            font-size: 13px;
+        }
+        
+        #msSignup .action-button {
+            width: 100px;
+            /*	background: #27AE60;*/
+            background: #FF6868;
+            font-weight: bold;
+            color: white;
+            border: 0 none;
+            border-radius: 1px;
+            cursor: pointer;
+            padding: 10px 5px;
+            margin: 10px 5px;
+        }
+        
+        #msSignup .action-button:hover,
+        #msSignup .action-button:focus {
+            box-shadow: 0 0 0 2px white, 0 0 0 3px #FF6868;
+        }
+        /*headings*/
+        
+        .fs-title {
+            font-size: 15px;
+            text-transform: uppercase;
+            color: #2C3E50;
+            margin-bottom: 10px;
+        }
+        
+        .fs-subtitle {
+            font-weight: normal;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        /* Make circles that indicate the steps of the form: */
+        
+        .step {
+            height: 15px;
+            margin: 0 2px;
+            background-color: #FF6868;
+            border: none;
+            border-radius: 50%;
+            display: inline-block;
+            opacity: 0.7;
+        }
+        
+        .step.active {
+            opacity: 1;
+        }
+        /* Mark the steps that are finished and valid: */
+        
+        .step.finish {
+            background-color: #FF6868;
+        }
+    </style>
+    <script>
+        window.onbeforeunload = function() {
+            return "Data will be lost if you leave the page, are you sure?";
+        };
+        var counter = 0;
+        fixStepIndicator(counter);
+
+        function nxtStep1() {
+            document.getElementById("first").style.display = "none";
+            document.getElementById("second").style.display = "block";
+            fixStepIndicator(counter + 1);
+        }
+
+        function nxtStep2() {
+            document.getElementById("second").style.display = "none";
+            document.getElementById("third").style.display = "block";
+            fixStepIndicator(counter + 2);
+        }
+
+        function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps...
+            var i = n,
+                x = document.getElementsByClassName("step");
+            for (i = n; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+            }
+            //... and adds the "active" class to the current step:
+            x[n].className += " active";
+        }
+
+        function prevStep1() {
+            document.getElementById("second").style.display = "none";
+            document.getElementById("first").style.display = "block";
+
+            fixStepIndicator(counter--);
+        }
+
+        function preStep2() {
+            document.getElementById("third").style.display = "none";
+            document.getElementById("second").style.display = "block";
+
+            fixStepIndicator(counter--);
+        }
+
+        function nxtStep3() {
+            document.getElementById("third").style.display = "none";
+            document.getElementById('btnDone').style.display = "none";
+            document.getElementById("fourth").style.display = "block";
+
+            document.getElementById('Register_alert').style.display = "block";
+
+            setTimeout(function() {
+
+                document.getElementById('Register_alert').innerHTML = "Neat.Your Request has been received, You shall receive a confirmation email with login details very soon";
+                document.getElementById('btnDone').setAttribute("style", "visibility:visible");
+                document.getElementById('stepCircles').style.display = "none";
+
+            }, 4000);
+
+        }
+    </script>
+</body>
+
+</html>

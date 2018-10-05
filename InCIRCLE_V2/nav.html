@@ -1,0 +1,114 @@
+<header class="outer-header wrapper">
+
+    <div class="navbar navbar-default navbar-fixed-top">
+        <p id="session-error" style="display: none;"><span style="font-size: 16px;font-weight:100">Oh snap!</span>&nbsp;looks like you are not logged in, Please log in to continue.</p>
+        <p id="logout-info" style="display: none;"><span style="font-size: 16px;font-weight:100">You have been logged out from all sessions successfully.</span></p>
+        <div class="container">
+            <div class="navbar-header">
+                <button button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" rel="home" href="../InCIRCLE_V2/index.html" title="INCIRCLE | 2.0">
+                    <img style="max-width:100px; margin-top: -7px;" width="40px" src="static/images/brand-logoV2.png">
+                </a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href='#'>Global</a></li>
+                    <li><a href='../InCIRCLE_V2/about.html'>About</a></li>
+                    <li><a href='javascript:void(0)'>Contact</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Learn More </a>
+                        <ul class="dropdown-menu">
+                            <li><a href='../InCIRCLE_V2/support.html#workplace_campus'>Workplace</a></li>
+                            <li><a href='../InCIRCLE_V2/support.html#tools'>Tools</a></li>
+                            <li><a href='https://play.google.com/store/apps/details?id=com.facebook.work'>Getting Social</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" id="btnSignup" data-target="#signup_modal" data-toggle="modal">Signup</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- header end -->
+<!-- Sign up Modal -->
+<div id="signup_modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><span class="title-logo"><img src="static/images/brand_faviconV2_24x24.ico"></span>&nbsp;&nbsp;<span>IN</span><span style="color:#FF6868">CIRCLE</span></h4>
+            </div>
+            <div class="modal-body">
+                <div id="emp_id_validate">
+                    <p>Enter Your Employee Id below.<span style="color: red"> (Digits only)</span></p>
+                    <label>INCR</label>
+                    <input type="text" class="form-control" name="otp" id="emp_id" required size="4" maxlength="4" onkeyup="AskEmpId()">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-default btn-success" tabindex="-1" id="register_emp_btn" disabled dismiss="modal" onclick="showProfile();">Register</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End :: Sign up Modal -->
+<!-- Validate Employee Modal -->
+<div id="validate_emp" class="modal" role="dialog" style="display: none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><span class="title-logo"><img src="static/images/brand_faviconV2_24x24.ico"></span>  <span>IN</span><span style="color:#FF6868">CIRCLE</span></h4>
+            </div>
+            <div class="modal-body">
+                <p id="validate_emp_data"><img src="static/images/Logo_v2.gif" id="load_data" style="padding-left: 30px;height: 30px;"> &nbsp;&nbsp;Please wait..while we validate your ID</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End :: Validate Employee Modal -->
+<!-- Error Loading Profile Modal -->
+<div id="error_profile" class="modal" role="dialog" style="display: none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"><span class="title-logo"><img src="static/images/brand_faviconV2_24x24.ico"></span>  <span>IN</span><span style="color:#FF6868">CIRCLE</span></h4>
+            </div>
+            <div class="modal-body">
+                <img src="static/images/error_404_normal.png" id='error-404' style=" position: relative ;padding-left:30px;height:120px;left:25%;top:-15px;">
+                <p id='error_text' style="text-align:left">
+                    <br>Something went wrong, retry submitting or try again later.
+            </div>
+            <div class="modal-footer">
+                <a href="static/images/InCircle_02.png" class='btn btn-danger' id="btn_bug_report" style="visibility: hidden;" target="_blank">Report Issue</a>
+                <button type="button" class="btn btn-link" id="btn_retry_sbmt" onclick="retry_emp()">Retry</button>
+                <button type="button" id="btn_retry_close" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End :: Error Loading Profile Modal -->
+<!-- Forgot Password Modal -->
+<div id="Forgot_modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"> <span>IN</span><span style="color:#FF6868">CIRCLE</span></h4>
+            </div>
+            <div class="modal-body">
+                <p>Enter your registered email address below to send you a password reset link.</p>
+                <input class="user_login_form" id='reset-email' input value="" required type="email" tabindex="1" autocomplete="off" name="reset-email" placeholder="email address here">
+                <button type="button" class="btn btn-submit btn-lg" id='send-resetEmail' data-toggle="modal" data-target="#myModal" onclick="resetpass()">Send</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

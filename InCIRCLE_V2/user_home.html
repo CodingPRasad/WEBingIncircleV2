@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- head start -->
+<head>
+    <title>Home | InCircle. ERP Made Easy</title>
+    <link rel="SHORTCUT ICON" href="static/images/favicon.ico" />
+    <!-- Meta tags start -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="description" content="A nice HTML5 InCircle ERP App, everyday tasks made easy" />
+    <meta name="keywords" content="InCircle, Incricle login, web based ERP platform, html5 ERP platform, best ERP platform, best web ERP platform, InCircle InCircle, iSource" />
+    <meta name="InCircle by InCircle" content="app-id=com.IncCirle.frame, app-argument=https://itunes.apple.com/in/app/Incircle/id1124408790?mt=8">
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="bootstrap-4.0.0-beta.2-dist/css/bootstrap.min.css">
+    <link href="//fonts.googleapis.com/css?family=Roboto:300|Open+Sans:300,400|Source+Sans+Pro:300" rel="stylesheet" type="text/css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Add icon library -->
+    <link rel="stylesheet" type="text/css" href="static/css/Redesign.css">
+    <!-- Js files -->
+    <script src="bootstrap-4.0.0-beta.2-dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="static/js/main-script.js"></script>
+</head>
+
+<body style="background-color:#F7F9FC">
+    <!--Navigation bar-->
+    <div id="nav-placeholder"></div>
+    <!--end of Navigation bar-->
+    <div class="row top-sm-buffer"></div>
+    <aside>
+        <div class="nav-side-menu">
+    <div class="brand">Brand Logo</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+        <div class="menu-list">
+  
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <a href="#">
+                  <i class="fa fa-dashboard fa-lg"></i> Dashboard
+                  </a>
+                </li>
+
+                <li  data-toggle="collapse" data-target="#products" class="collapsed active">
+                  <a href="#"><i class="fa fa-gift fa-lg"></i> UI Elements <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="products">
+                    <li class="active"><a href="#">CSS3 Animation</a></li>
+                    <li><a href="#">General</a></li>
+                    <li><a href="#">Buttons</a></li>
+                    <li><a href="#">Tabs & Accordions</a></li>
+                    <li><a href="#">Typography</a></li>
+                    <li><a href="#">FontAwesome</a></li>
+                    <li><a href="#">Slider</a></li>
+                    <li><a href="#">Panels</a></li>
+                    <li><a href="#">Widgets</a></li>
+                    <li><a href="#">Bootstrap Model</a></li>
+                </ul>
+
+
+                <li data-toggle="collapse" data-target="#service" class="collapsed">
+                  <a href="#"><i class="fa fa-globe fa-lg"></i> Services <span class="arrow"></span></a>
+                </li>  
+                <ul class="sub-menu collapse" id="service">
+                  <li>New Service 1</li>
+                  <li>New Service 2</li>
+                  <li>New Service 3</li>
+                </ul>
+
+
+                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                  <a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="new">
+                  <li>New New 1</li>
+                  <li>New New 2</li>
+                  <li>New New 3</li>
+                </ul>
+
+
+                 <li>
+                  <a href="#">
+                  <i class="fa fa-user fa-lg"></i> Profile
+                  </a>
+                  </li>
+
+                 <li>
+                  <a href="#">
+                  <i class="fa fa-users fa-lg"></i> Users
+                  </a>
+                </li>
+            </ul>
+     </div>
+</div>
+    </aside>
+    <div class="container">
+        <div class="row dashboard-top">
+            <div id='dashboard-user-details'>
+                <div class="col-lg-2">
+                    <img id=dashboard-user-img src="static/images/profile_avtar.png" style="height:170px;width:170px;border:solid 2px #818181;float:left;background-color: #616161" />
+                </div>
+                <div class="col-lg-4">
+                    <h3 id='greetUserName' style="float:left">Hello, Prasad</h3>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p id='user_designation' style="color: #818181">Software Test Engineer</p>
+                            <p style="color: #818181" id='user_email'>prasad@epicomm.net</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+
+                    <div class="row right-figures">
+                        <div class="col-sm-3" id="hours_data" data-target="#hours_modal" data-toggle='modal' style="cursor: pointer">
+                            <center>
+                                <p>Hours tihs week</p>
+                            </center>
+                            <center>
+                                <h1>33</h1></center>
+                        </div>
+                        <div class="col-sm-3" data-target="#user_home">
+                            <center>
+                                <p>Leaves this months</p>
+                            </center>
+                            <center>
+                                <h1>00</h1></center>
+                        </div>
+                        <div class="col-sm-3 ">
+                            <center>
+                                <p>Pending Claims</p>
+                            </center>
+                            <center>
+                                <h1>3</h1></center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="bottom-buffer0"></div>
+        <div class="col-xs-6">
+
+            <div class="panel panel-default" style="height:80px;width:90%">
+                <div class="panel-heading">Recently Visited.</div>
+                <div class="panel-body">Panel Content</div>
+            </div>
+        </div>
+
+        <div class="col-xs-6">
+
+            <div class="panel panel-default" style="height:80px;width:60%">
+                <div class="panel-heading">Recently Visited.</div>
+                <div class="panel-body">Panel Content</div>
+            </div>
+        </div>
+
+        <div class="col-xs-4">
+
+            <div class="panel panel-default" style="height:80px; width: 60%">
+                <div class="panel-heading">Recently Visited.</div>
+                <div class="panel-body">Panel Content</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row top-sm-buffer"></div>
+
+    <!-- Side bar-->
+    <aside>
+        <div id="mySidenav" class="sidenav-right" style="width:350px">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="panel-group" id="birthdayAccordion">
+                        <div class="panel panel-info">
+                            <div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#birthdayAccordion" data-target="#buddy_data">
+                                <h4><span class="glyphicon glyphicon-king"></span>&nbsp;Birthday Buddy</h4></div>
+
+                            <div class="panel-collapse collapse" style="height: 0px;" id="buddy_data">
+                                <div class="panel-body">
+                                    <div class="col-sm-4 ">
+                                        <figure class="buddy_img"><img src="static/images/profile_avtar_68x68.png" alt="birthday_buddy" />
+
+                                            <figcaption class="buddy_img-alt">Prasad</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <figure class="buddy_img" alt="birthday_buddy"><img src="static/images/profile_avtar_68x68.png" alt="birthday_buddy" />
+                                            <figcaption class="buddy_img-alt">Prasad</figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <figure class="buddy_img" alt="birthday_buddy"><img src="static/images/profile_avtar_68x68.png" alt="birthday_buddy" />
+                                            <figcaption class="buddy_img-alt">Prasad</figcaption>
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <div class="panel-group" id="recentAnnounments">
+                        <div class="panel panel-info">
+                            <div class="panel-heading accordion-toggle question-toggle " data-toggle="collapse" data-parent="#recentAnnounments" data-target="#announcements">
+                                <h4><span class="glyphicon glyphicon-bullhorn"></span>&nbsp;Recent announcement </h4></div>
+                            <div id="announcements">
+                                <div class="panel-body">
+                                    <div class="wrapper announcements">
+                                        <p> this is annoumcment #1</p>
+                                        <p> this is annoumcment #2</p>
+                                        <p> this is annoumcment #3</p>
+                                        <p> this is annoumcment #4</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+   <div id="hours_modal"class="modal" role="dialog">
+  <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                 <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><span class="title-logo"><img src="static/images/brand_faviconV2_24x24.ico"></span>  <span>IN</span><span style="color:#FF6868">CIRCLE</span></h4>
+            </div>
+            <div class="modal-body">
+                <p>This is easy !! there is nothing to show</p>
+            </div>
+            <div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>
+        </div>
+    </div>
+    </div>
+    <script>
+        $('.toggle').on('click', function() {
+            $('.sidebar').toggleClass("sidebar-collapsed");
+        });
+
+        //       if (localStorage.getItem("userID")){ 
+        //           $("#nav-placeholder").load("nav_auth.html"); }else{window.location.replace("signup.html");}
+
+        $(function() {
+            if (localStorage.getItem("userID") === "") {
+                //window.location ="signup.html";
+                console.log("this is changed")
+            } else {
+                $("#nav-placeholder").load("nav_auth.html");
+            }
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- head start -->
+
+<head>
+    <title>InCircle. ERP Made Easy</title>
+    <link rel="SHORTCUT ICON" href="static/images/favicon.ico" />
+    <!-- Meta tags start -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="description" content="A nice HTML5 InCircle ERP App, everyday tasks made easy" />
+    <meta name="keywords" content="InCircle, Incricle login, web based ERP platform, html5 ERP platform, best ERP platform, best web ERP platform, InCircle InCircle, iSource" />
+    <meta name="InCircle by InCircle" content="app-id=com.IncCirle.frame, app-argument=https://itunes.apple.com/in/app/Incircle/id1124408790?mt=8">
+    <!-- Style sheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/Redesign.css">
+    <!-- Js files -->
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--         <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+    <script src="../InCIRCLE_V2/static/js/main-script.js"></script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    $('body').load('index.html', function() {
+        $('#nav-placeholder').hide();
+        $('#session-error').show();
+
+        setpopuptime();
+
+    });
+
+    function setpopuptime() {
+        setTimeout(function() {
+
+            $('#session-error').fadeOut();
+            $('#session-error').hide();
+            $('#nav-placeholder').show();
+        }, 5000);
+
+    }
+</script>

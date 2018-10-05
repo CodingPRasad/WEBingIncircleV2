@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <!-- head start -->
+    <head>
+        <title>Signup | InCircle. ERP Made Easy</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!--         <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+        <script src="static/js/main-script.js"></script>
+    </head>
+
+<body>
+   
+    <input type="submit" class="button" name="insert" value="insert" />
+<input type="submit" class="button" name="select" value="select" />
+    
+    </body>
+
+<script>
+    $(document).ready(function(){
+    $('.button').click(function(){
+        var clickBtnValue = $(this).val();
+        var ajaxurl = 'ajax.php',
+        data =  {'action': clickBtnValue};
+        $.post(ajaxurl, data, function (response) {
+            // Response div goes here.
+            alert("action performed successfully");
+        });
+    });
+
+});</script>
+</html>

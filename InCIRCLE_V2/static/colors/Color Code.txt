@@ -1,0 +1,53 @@
+Color Pallete Wix 
+#733ca6
+
+#b13dac
+
+#459fed
+
+#3cc7c5
+
+#65c888
+
+#faad4d
+
+#f27052
+
+
+=========Typeface Helvetica Neue ==========
+
+#20303c
+
+#43515c
+
+#66737c
+
+#858f96
+
+#a3abb0
+
+#c2c7cb
+
+#e0e3e5
+
+#eff1f2
+
+Ultra Light 25
+
+Thin 35
+
+Light 45
+
+Roman 55
+
+Medium 65
+Bold 75
+
+
+============Trello husky codes ==================
+#81919B
+#566E79
+#D4D9DD
+#EFF1F2
+#E5E9EB
+#CCD3D7

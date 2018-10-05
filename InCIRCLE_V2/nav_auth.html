@@ -1,0 +1,50 @@
+<!-- header start -->
+<header class="outer-header wrapper">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" rel="home" href="../InCIRCLE_V2/index.html" title="ERP Solutions Provider">
+                    <img style="max-width:100px; margin-top: -7px;" src="static/images/favicon.ico" />
+                </a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href='#'><span class="glyphicon glyphicon-dashboard"></span>&nbsp;Dashboard</a></li>
+                    <li><a href='#'><span class="glyphicon glyphicon-adjust"></span>&nbsp;Self-Services</a></li>
+                    <li><a href='#' target="_blank"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;Projects</a></li>
+                    <li><a href='#'><span class="glyphicon glyphicon-apple"></span>&nbsp;Leaves</a></li>
+                    <li><a href='#'><span class="glyphicon glyphicon-list-alt"></span>&nbsp;SkillSet</a></li>
+                    <li><a href='#'><span class="glyphicon glyphicon-compressed"></span>&nbsp;Tools</a></li>
+
+                    <li><a href='#'><span class="glyphicon glyphicon-object-align-top"></span>&nbsp;WorkPlace</a></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" id="profileDDL" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="text-transform:capitalize;opactiy:0.4;font-weight:bold;"></a>
+                        <ul class="dropdown-menu">
+                            <li><a href='../InCIRCLE_V2/Tabs.html'><span class="glyphicon glyphicon-user"></span>&nbsp;Profile</a></li>
+                            <li><a href='../InCIRCLE_V2/settings.html'><span class="glyphicon glyphicon-cog"></span>&nbsp;Settings</a></li>
+                            <hr/>
+                            <li class="disabled"><a href='#'><span class="fa fa-sliders"></span>&nbsp;Manage Account</a></li>
+                            <li class="disabled"><a href='#'><span class="fa fa-sliders"></span>&nbsp;Ledger Account</a></li>
+                            <hr/>
+                            <li><a href='../InCIRCLE_V2/loggedout.html'><span class="glyphicon glyphicon-off"></span>&nbsp;Sign out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- header end -->
+<script>
+    $(function() {
+
+        $('#profileDDL').html(localStorage.getItem("userID"));
+    });
+</script>

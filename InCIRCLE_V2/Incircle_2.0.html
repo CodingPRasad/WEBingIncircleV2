@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- head start -->
+
+<head>
+    <title>INCIRCLE | 2.0</title>
+    <link rel="SHORTCUT ICON" href="static/images/favicon.ico">
+    <!-- Meta tags start -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="description" content="A nice HTML5 InCircle ERP App, everyday tasks made easy" />
+    <meta name="keywords" content="InCircle, Incricle login, web based ERP platform, html5 ERP platform, best ERP platform, best web ERP platform, InCircle InCircle, iSource" />
+    <meta name="InCircle by InCircle" content="app-id=com.IncCirle.frame, app-argument=https://itunes.apple.com/in/app/Incircle/id1124408790?mt=8">
+    <!-- Style sheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/Redesign.css">
+    <!-- Js files -->
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--         <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+    <script src="static/js/main-script.js"></script>
+</head>
+
+<body>
+    <div id="overlay">
+        <img src="static/images/Logo_loader.gif" alt="Loading" id="loading" height="150px;" />
+    </div>
+    <header class="outer-header wrapper">
+
+        <div class="navbar navbar-default navbar-fixed-top" style="background-color: #f7f7f7">
+            <p id="session-error" style="display: none;"><span style="font-size: 16px;font-weight:100">Oh snap!</span>&nbsp;looks like you are not logged in, Please log in to continue.</p>
+            <p id="logout-info" style="display: none;"><span style="font-size: 16px;font-weight:100">You have been logged out from all sessions successfully.</span></p>
+            <div class="container">
+                <div class="navbar-header">
+                    <button button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" rel="home" href="../InCIRCLE_V2/index.html" title="Buy Sell Rent Everyting">
+                        <img style="max-width:100px; margin-top: -7px;" src="static/images/favicon.ico">
+                    </a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href='#'>What's New</a></li>
+                        <li><a href='javascript:void(0)'>About 2.0</a></li>
+                        <li><a href="#" id="btnSignup" data-target="#signup_modal" data-toggle="modal">Signup</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+    <div class="container">
+        <div class="content" style="padding-left:5.3333%;">
+            <div class="row top-buffer">
+                <div class="row">
+                <div class="col-xs-6">
+                    <h1>Everything got neat &amp; simple</h1>
+                    <h4>All fresh &amp; young version is phased in now! </h4>
+                    <hr>
+                    <h2>InCircle</h2>
+                </div>
+            </div>
+            </div>
+<!--
+                <div class="row">
+                    <column cols=6>
+                    <img class="Banner_version2" alt="" id="banner_V2" src="static/images/banners/Open_trade.gif" style="position:relative;">
+                    </column>
+            
+                </div>
+-->
+                </div>
+                <div class="row top-buffer">
+                    <div class="col-xs-12">
+                        <center>
+                            <h2>Simple is new #trendy</h2></center>
+                        <img class="Screens" alt="" id="loginV2" src="static/images/V2/login_V2.png" style="left: 20.333%;position: relative">
+                        <h4 style="padding-top:3%;"><center>Introducing clutter free, simple login, nothing fancy. As simple as that.</center></h4>
+                    </div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col-xs-12">
+                        <center>
+                            <h2>Manage everything #online</h2></center>
+                        <img class="Screens" alt="" id="profileV2" src="static/images/V2/Profile_V2.png" style="left: 20.333%;position: relative">
+                        <h4 style="padding-top:3%;"><center>Managing paperwork was never been easy, we covered you</center></h4>
+                    </div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col-xs-12">
+                        <center>
+                            <h2>All tools available online to #learn</h2></center>
+                        <img class="Screens" alt="" id="supportV2" src="static/images/V2/tools_V2.png" style="left: 20.333%;position: relative">
+                        <h4 style="padding-top:3%;"><center>Learn all tools you need online, wtih our new 'tools' library</center></h4>
+                    </div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col-xs-12">
+                        <center>
+                            <h2>Need help on anything, connect with #support </h2></center>
+                        <img class="Screens" alt="" id="supportV2" src="static/images/V2/support_V2.png" style="left: 20.333%;position: relative">
+                        <h4 style="padding-top:3%;"><center>Get help on anyting, raise tickets &amp; track them till solved.</center></h4>
+                    </div>
+                </div>
+
+            </div>
+    
+    <div class="footer">
+        <div class="container" id="bgcontaienr">
+            <a href="index.html"><h3>Continue to Login INCIRCLE</h3></a>
+        </div>
+    </div>
+</body>
+<style>
+    body,
+    html {
+        background-color: #f7f7f7;
+    }
+    
+    .container {
+        background-color: #ffffff;
+    }
+    
+    h1 {
+        color: #444444;
+    }
+    
+    .footer {
+        background-color: #f7f7f7;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    #bgcontaienr {
+        background-color: #ff6868;
+    }
+    
+    #bgcontaienr a {
+        color: #ffffff;
+        text-align: center;
+        text-decoration: none;
+    }
+</style>
+
+</html>

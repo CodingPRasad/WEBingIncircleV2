@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- head start -->
+
+<head>
+    <title>InCircle. ERP Made Easy</title>
+    <link rel="SHORTCUT ICON" href="static/images/favicon.ico">
+    <!-- Meta tags start -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="description" content="A nice HTML5 InCircle ERP App, everyday tasks made easy" />
+    <meta name="keywords" content="InCircle, Incricle login, web based ERP platform, html5 ERP platform, best ERP platform, best web ERP platform, InCircle InCircle, iSource" />
+    <meta name="InCircle by InCircle" content="app-id=com.IncCirle.frame, app-argument=https://itunes.apple.com/in/app/Incircle/id1124408790?mt=8">
+    <!-- Style sheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/Redesign.css">
+<!--    <link rel="stylesheet" type="text/css" href="static/css/greyscale.css">-->
+    <link rel="stylesheet" href="node_modules/octicons/build/font/octicons.css">
+    <!-- Js files -->
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--         <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+    <script src="static/js/main-script.js"></script>
+</head>
+<!-- head end -->
+<!-- body start -->
+
+<body>
+    <div id="overlay">
+        <img src="static/images/Logo_v2.gif" alt="Loading" id="loading" height="150px;" />
+    </div>
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+    </div>
+    <p id="session-error" style="display: none;"><span style="font-size: 16px;font-weight:100">Oh snap!</span>&nbsp;looks like you are not logged in, Please log in to continue.</p>
+    <p id="logout-info" style="display: none;"><span style="font-size: 16px;font-weight:100">You have been logged out from all sessions successfully.</span></p>
+    <!--end of Navigation bar-->
+    <!--
+        <header class="outer-header wrapper">
+
+            <div class="navbar navbar-default navbar-fixed-top">
+                <p id="session-error" style="display: none;"><span style="font-size: 16px;font-weight:100">Oh snap!</span>&nbsp;looks like you are not logged in, Please log in to continue.</p>
+                 <p id="logout-info" style="display: none;"><span style="font-size: 16px;font-weight:100">You have been logged out from all sessions successfully.</span></p>
+
+        <!-- header end -->
+    <div class="container">
+        <div class="content">
+            <div class="row top-buffer">
+                <div class="col-xs-7">
+
+                    <img class="owl_header_img" alt="" id="home_owl" src="../InCIRCLE_V2/static/images/owl_main.png" />
+
+                </div>
+                <div class="col-sm-5">
+                    <h2><span class="login-title"  title="Login here">Login to IN<span style= "color:#FF6868;">CIRCLE</span></span><a class ="login_user_manual" href="javascript:void(0)" onclick="smsCheck()" title="Help">Need help?</a></h2>
+                    <form id="login_form" name="login" action="../InCIRCLE_V2/user_home.html" method=POST onsubmit="return validateLogin()">
+                        <div>
+                            <input class="user_login_form" id='user_id' type="text" required tabindex="1" name="user_id" autofocus autocomplete=off placeholder="User Name">
+                        </div>
+                        <div>
+                            <input class="user_login_form" id='pass_id' required type="password" tabindex="2" name="user_pass" placeholder="Password" onkeypress="return RestrictSpace(event)">
+                            <p id="user_error"></p>
+                        </div>
+                        <div class='row'>
+                            <div class="col-sm-12 right">
+                                <input class="user_login_submit" type="submit" id='btnLogin' tabindex="3" name="login_btnSubmit" tabindex='3' value="LOGIN" />
+                                <a class="forgot_password" title="forgot password" data-target="#Forgot_modal" data-toggle="modal" onclick="autoFocus()">forgot password?</a>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="col-md-4">
+                    </div>
+                </div>
+                <div class="row top-buffer">
+                    <div class="col-xs-4" style="left:8%;color: #aaa;">
+                        <!--                           <div id='showtime'></div>-->
+                        <h2 id='time_greetings_msg'></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="quote_row">
+
+                <h3 class="quote" style="color: #aaa;"><q>You can never cross the ocean until you have the<br>courage to lose sight of the shore</q></h3>
+            </div>
+            <!--Google Translate  -->
+            <!--  <div class="container">
+                    <div class="row">
+                     <div class="col-sm-12 text-center">
+                         <p>InCirCle co.in is available in your native language</p>
+                           <div id="google_translate_element">
+                               </div>
+                         </div>
+                               </div>
+                    </div>-->
+            <!-- End :: Google Translate  -->
+        </div>
+    </div>
+    <!-- Main Footer start -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="fund-support">
+                        <a class="funding-source" href="javascript:void(0)"><img src="static/images/rainmatter.png" alt="Rainmatter" title="Funded by"></a>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="javascript:void(0)">Report Issue</a></li>
+                        <li><a href="javascript:void(0)">Legal</a></li>
+                        <li><a href="javascript:void(0)">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p style="font-size:11px;" title="&copy;2017 copyright "><span style="color:#929292">IN</span><span style="color:#929292">CIRCLE Inc.&nbsp;</span><span style="color:#929292;">Copy Right &copy; 2017</span></p>
+            </div>
+        </div>
+    </footer>
+    <!-- End :: Footer -->
+    <!-- Start :: Modals  -->
+
+    <!-- Validate Employee Modal -->
+    <div id="validate_emp" class="modal" role="dialog" style="display: none">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"><span class="title-logo"><img src="static/images/brand_faviconV2.ico"></span>  <span>IN</span><span style="color:#FF6868">CIRCLE</span></h4>
+                </div>
+                <div class="modal-body">
+                    <p id="validate_emp_data"><img src="static/images/loading_small.gif" id="load_data" style="padding-left: 30px;height: 30px;"> &nbsp;&nbsp;Please wait..while we validate your ID</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End :: Validate Employee Modal -->
+    <!-- Error Loading Profile Modal -->
+    <div id="error_profile" class="modal" role="dialog" style="display: none">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"><span class="title-logo"><img src="../InCIRCLE_V2/static/images/brand_logo_MIa_icon.ico"></span>  <span>IN</span><span style="color:#FF6868">CIRCLE</span></h4>
+                </div>
+                <div class="modal-body">
+                    <img src="static/images/error_404_normal.png" id='error-404' style=" position: relative ;padding-left:30px;height:120px;left:25%;top:-15px;">
+                    <p id='error_text' style="text-align:left">
+                        <br>Something went wrong, retry submitting or try again later.
+                </div>
+                <div class="modal-footer">
+                    <a href="static/images/InCircle_02.png" class='btn btn-danger' id="btn_bug_report" style="visibility: hidden;" target="_blank">Report Issue</a>
+                    <button type="button" class="btn btn-link" id="btn_retry_sbmt" onclick="retry_emp()">Retry</button>
+                    <button type="button" id="btn_retry_close" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End :: Error Loading Profile Modal -->
+    <!-- Forgot Password Modal -->
+    <div id="Forgot_modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"><span class="title-logo"><img src="../InCIRCLE_V2/static/images/brand_faviconV2_24x24.ico"></span>&nbsp;&nbsp;<span>IN</span><span style="color:#FF6868">CIRCLE</span></h4>
+                </div>
+                <div class="modal-body">
+                    <p>Enter your registered email address below to send you a password reset link.</p>
+                    <input class="user_login_form" id='reset-email' input value="" required type="email" tabindex="1" autocomplete="off" name="reset-email" placeholder="email address here">
+                    <button type="button" class="btn btn-submit btn-lg" id='send-resetEmail' data-toggle="modal" data-target="#myModal" onclick="resetpass()">Send</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End :: Forgot Password Modal -->
+    <!-- Forgot Password Success Modal -->
+    <div id="Forgot_suceess_modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"><span class="title-logo"><img src="../InCIRCLE_V2/static/images/brand_faviconV2_24x24.ico"></span>&nbsp;&nbsp;<span>IN</span><span style="color:#FF6868">CIRCLE</span></h4>
+                </div>
+                <div class="modal-body">
+                    <h3 style="color:#ff6868"><span><img class="success-tick" src="static/images/Tick.png"></span>    &nbsp;Email Sent Successfully</h3>
+                    <p>Password reset email has been sent to your email address,it will be valid for next 5 minutes only.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End :: Forgot Password Success Modal -->
+
+</body>
+
+</html>

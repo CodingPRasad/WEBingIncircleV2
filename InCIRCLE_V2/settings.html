@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!-- head start -->
+
+<head>
+    <title>Settings | InCircle. ERP Made Easy</title>
+    <link rel="SHORTCUT ICON" href="static/images/favicon.ico" />
+    <!-- Meta tags start -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="description" content="A nice HTML5 InCircle ERP App, everyday tasks made easy" />
+    <meta name="keywords" content="InCircle, Incricle login, web based ERP platform, html5 ERP platform, best ERP platform, best web ERP platform, InCircle InCircle, iSource" />
+    <meta name="InCircle by InCircle" content="app-id=com.IncCirle.frame, app-argument=https://itunes.apple.com/in/app/Incircle/id1124408790?mt=8">
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="bootstrap-4.0.0-beta.2-dist/css/bootstrap.min.css">
+    <link href="//fonts.googleapis.com/css?family=Roboto:300|Open+Sans:300,400|Source+Sans+Pro:300" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/Redesign.css">
+    <!-- Js files -->
+    <script src="bootstrap-4.0.0-beta.2-dist/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="static/js/main-script.js"></script>
+</head>
+<!-- head end -->
+
+<body>
+    <div id="overlay">
+        <img src="static/images/fidget-spinner.gif" alt="Loading" id="loading" height="150px;" />
+    </div>
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+    </div>
+    <!--end of Navigation bar-->
+    <div role="main" class="wrapper">
+        <div class="row top-sm-buffer">
+            <div class="container">
+                <div class="page sub-header" style="background-color: #f48024;color:#fff; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;">
+                    <h3><span class="glyphicon glyphicon-cog"></span>&nbsp;Settings</h3>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="settings_Sec">
+                <div class="row">
+                    <div class="container">
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    $(function() {
+        $("#nav-placeholder").load("nav_auth.html");
+    });
+</script>
+
+</html>

@@ -1,0 +1,27 @@
+morgan standley blue #0f8ec7
+asx 
+#0265b6
+westpac #d5002b
+nyse #00b9e4
+#e2585f
+#fa5758
+#ff8252
+#ff6868
+#ff5252
+#ea4335
+#62d080
+#18a5d0
+#02ccba
+#005598
+#15c39a
+#65c888 Wix(Finance)
+#6C7174 (text)
+footer#f0f9fb
+
+
+#ff5800 avanade
+#4253c6 front
+#ec4847 gusto
+#25d6c9 gusto
+#4274f6 clever
+

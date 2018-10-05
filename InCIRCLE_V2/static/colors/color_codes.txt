@@ -1,0 +1,20 @@
+Background-color
+#fff , #222222 ,#f9f9f9, #ff6868, #eee #fafafb, #117bf3, #efefef,#ccc, 
+#2196F3, #fffdf6,#bbbbbb, #4CAF50,#f7f7f7,#616161 , 
+#Content Color
+#666, #ddd, #242729,#f1f1f1,#929292, #2C3E50
+
+color pallate
+#ff6868
+
+h1 
+444444;
+
+h4
+#505354
+
+border
+#ff6868 , #e7e7e7, #dddddd,#818181
+
+links
+#929292
