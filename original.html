@@ -1,0 +1,226 @@
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>C_Magic</title>
+<script type="text/javascript" src="script.js"></script>
+<link type="text/css" rel="stylesheet" href="style.css"/>
+
+</head>
+<body>
+<div class="webtitles">
+</div>
+ <h3 class="websubtitles">You think, das you are</h3>
+
+<body onload="loginform.reset()">
+<div class="nav-bar">
+<ul id="head-top-menu" role="banner">
+<li> <a id="login" class="navmenu" data-target=".login-signup" data-dismiss="modal">Login/Signup</a></li>
+<li> <a id="commercial" class="navmenu" data-item="#commercial">Commercial</a></li>
+<li> <a id="about" class="navmenu" data-item="#About">About</a></li>
+<li> <a id="contact" class="navmenu" data-item="#commercial">Contact</a></li>
+</ul>
+</div>
+<div class="jumbotron">
+<!--<form title="login" id=loginFormId name="loginform" onsubmit="return validate()" action="" autocomplete="off">-->
+<div class="login-signup" tabindex="-1" data-toggle="modal" data-target="loginmodal"></div>
+<form title="login" id=loginFormId name="loginform" onsubmit="return validate()" action="Thankyou.html"  method=POST autocomplete="off">
+<!--Modal-->
+
+<div class="modal fade"  role="dialog" id="loginmodal" onsubmit=" return validate()">
+<div class="modal-dialog">
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<h4 class="modal-title">Login/Signup -CR4S</h4>
+</div>
+
+<div class="modal-body">
+<input class="textBox" type='text' id="email" autofocus  required placeholder='Email' size="70"><br>
+<h7 id="eError"></h7><br><br>
+
+<input class="textBox" type='password' id="password"  required placeholder='Password' size="70"><br><br>
+<h7 id="pError"></h7><br><br>
+<!--<a href="#" data-dismiss="modal" class="btn">Close</a>-->
+<input type="submit" id="lgn-btn" title="Click to Login" value="Login" /><br>
+<div id="askLogin"><br>
+<p><a data-toggle="modal" data-target="signupmodal" id="signup" href="#" style="text-decoration:none">New to Demo?Click here to Signup.</a></p>
+</div>
+
+
+</div>
+<!-- Modal footer-->
+
+<div class="modal-footer">
+<a href="about.html">Know More about C4RS</a>
+<!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>-->
+</div>
+</div>
+</div>
+</div>
+</form>
+<!--########################################### Start  iof Sign up Modal Code##################################-->
+
+<div class="login-signup" tabindex="-1" data-toggle="modal" data-target="signupmodal"></div>
+<form title="signup" id=signupformId name="signupform" onsubmit="return validateSignup()" action="Thankyou.html"  method=POST autocomplete="off">
+<!--Modal-->
+
+<div class="modal fade"  role="dialog" id="signupmodal" onsubmit=" return validateSignup()">
+<div class="modal-dialog">
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<h4 class="modal-title">Login/Signup -CR4S</h4>
+</div>
+
+<div class="modal-body">
+<input class="textBox" type='text' id="s_uname" autofocus  required placeholder='Profile name' size="70"><br><h7 id="s_uError"></h7><br><br>
+<input class="textBox" type='text' id="email" autofocus  required placeholder='Email' size="70">
+<br>
+<h7 id="s_eError"></h7><br><br>
+<input class="textBox" type='password' id="password"  required placeholder='Password' size="70"><br>
+<h7 id="s_pError"></h7><br><br>
+<input class="textBox" type='password' id="conpassword"  required placeholder='Confirm Password' size="70"><br>
+<h7 id="s_cpError"></h7><br><br>
+<!--<a href="#" data-dismiss="modal" class="btn">Close</a>-->
+<input type="submit" id="lgn-btn" title="Click to Signup" value="Sign up" onsubmit="return validateSignup()"  /><br>
+<div id="askLogin"><br>
+<p><a data-toggle="modal" data-target="loginmodal" id="login-window"   href="#" style="text-decoration:none; font-size : 1.2em;" >Already Have an Account?Login here</a></p>
+</div>
+
+
+</div>
+<!-- Modal footer-->
+
+<div class="modal-footer">
+<a href="about.html">Know More about C4RS</a>
+<!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>-->
+</div>
+</div>
+</div>
+</div>
+</form>
+</div>
+<!--    #439fe0  ########################################### End of Sign up Modal Code##################################-->
+
+<section class="jumbotron_02">
+<div id="section_02">
+<h1 class="sec_heading">Get it Done, Anywhere</h1> 
+<p class="sec_info">Control your work burden with our featured services & get things done on the go </p>
+</div>
+<table class="table-box">
+<thead></thead>
+<tbody>
+<tr>
+<td><img class="img-box" src="images/public/cloudcc_01.png"/></td>
+<td><img class="img-box" src="images/public/eternity.png"/></td>
+<td><img class="img-box" src="images/public/hands-Collaborate.png"/></td>
+<td><img class="img-box" src="images/public/diamond.png"/></td>
+</tr>
+<tr>
+<td><p>Cloud Synced<p class="sub-text">No more conflicts..get hassle free with dedicated clouds to your work</p></td> 
+<td><p>Beatuifully Integrated</p><p class="sub-text">Orders,live updates, stocks & more everything everywhere</p></td> 
+<td><p>Team Collaboration </p><p class="sub-text">Send/receive every important updates for your team </td> 
+<td><p>Crystal Reports</p><p class="sub-text">Track & monitor your team/work progress with reports </td> 
+
+</tr>
+</tbody>
+</table>
+</section>
+
+<section class="jumbotron_03"> 
+<div class="col-sm-8">
+<image class="col-8-img-box" src="images/public/everywhere@2x.png"/>
+</div>
+<div class="col-sm-4">
+<h1 class="sec_heading2">Everywhere you go</h1>
+<p class="sec_info2">
+With fully native apps for iOS and Android, whatever you do on one device is reflected everywhere. Everything is in sync. We’ll keep your place so you can always pick up wherever you left off.</p></div>
+</section>
+
+
+<section class="jumbtron_04">
+<div class="col-sm-6">
+<h1 class="sec_heading4">Reclaim your Workday.</h1>
+<p class="sec_info4">Spend some time at home, bring office home.Less emails,More work, as simple as that, bring a <strong>Productive life.Live</strong></p>
+<div class="reclaim-btn">See How</div>
+
+</div>
+<div class="col-sm-6">
+<img class="img_reclaim" src="images/backgrounds/silhouttes.jpg"/></div>
+</section>
+
+
+<div class="team-intro">
+<p>C4RS is a Free to use, Invite your team and get started today</p> 
+<button class="team-btn">Invite Now</button>
+</div>
+
+<div class="team-invite" style="display:none;">
+<p>Enter emails and we will invite your mates to join you.</p> 
+<input type="text" id='invite-emails'  name='email'  placeholder='enter emails here' size="30"><br>
+<!--<div data-value=""  id='style-email' style="padding-left: 12px; padding-right: 12px;">-->
+<p id='subtext'>You can enter multiple emails with comma</p></div>
+</div>
+
+<section class="footer-section">
+<div class="col-sm-4" >
+<image class="footer-img" src="images/headers/cropped_Footer.png"/>
+</div>
+<div class="col-sm-8">
+
+<table class="footer-link">
+<tbody>
+<th colspan="1"> Technology </th>
+<th> For Enterprise </th>
+<th> About us</th>
+<th> Contact us</th>
+<tr> 
+
+<td><ol>
+<li><a href="#">Why Register</a></li>
+<li><a href="#">Data Security</a></li>
+<li><a href="#">Login Access</a></li>
+<li><a href="#">Web Applications</a></li>
+</ol></td>
+
+<td><ol>
+<li><a href="#">Request Demo</a></li>
+<li><a href="#">CMagic for Entepise</a></li> 
+<li><a href="#">CMagic for Business</a></li> 
+<li><a href="#">Meet our Representative</a></li>
+</ol></td>
+
+<td><ol>
+<li><a href="#">Who we are</a></li>
+<li><a href="#">Locate us</a></li>
+<li><a href="#">Privacy policies</a></li>
+<li><a href="#">Terms of use</a></li>
+</ol></td>
+
+<td><ol>
+<li><a href="#">Request a call</a></li>
+<li><a href="#">Schedule a e-meeting</a></li>
+<li><a href="#">Schedule a con-call</a></li>
+<li><a href="#"> Schedule a office meeting</a></li>
+</ol></td>
+
+</tr> 
+</tbody>
+</table>
+</div>
+<div class="copyright">
+<p id= "notify">2017&copy;CMagic Solutions LLP;user consent aggrement required.<br>
+rev 1.0 &copy; 2017</p>
+</div>
+</section>
+</body>
+</html>

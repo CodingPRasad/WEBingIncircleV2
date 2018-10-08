@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--    <script type="text/javascript" src="script.js"></script>-->
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Demo</title>
+
+</head>
+<body>
+<table class="tbl_layout" width="100%">
+ <tr>
+    <td class="colbar_1" width="18%">1</td>
+    <td class="colbar_2" width="15%">2</td>
+     <td class="colbar_3" width="15%">3</td>
+     <td class="colbar_4" width="5%">4</td>
+     <td class="colbar_5" width="10%">4</td>
+     <td class="colbar_6" width="5%">4</td>
+    
+   
+  </tr>
+    </table>
+    
+   
+<div class="bkimg">
+    <img src="images/headers/down_app-img.png">
+    <div class="app_logo">
+        <p>Available on </p>
+     <img src="images/public/playstore.png">
+    <img src="images/public/apple_logo.png">
+       
+    </div>
+    </div>
+<div class="warp1">
+<h1 id="hptitle">Welcome to CMagic.</h1>
+   <h3 id="uname1"></h3>
+<h3 id="subtitle">You can now use CMagic on the go with our latest App</h3><br>
+    <p id="subtitle_01">Beautifuuly integrated reports,task assignmets,chat,Updates & more </p>
+<br><input type="button" title="Download" name="okbtn" class="okbtn" value="Download Now">
+    <a href="login.html" title="Skip" name="skip" class="skipbtn" >Skip for Now</a>
+</div>
+    <script>
+    document.getElementById("uname1").innerHTML= "Hey, " +  localStorage.getItem("profilename");
+    history.pushState(null, null, 'index.html');
+    window.addEventListener('popstate', function(event) {
+    history.pushState(null, null, 'index.html');
+    });
+</script>
+</body>
+
+</html>
+
+<style>
+    html, body {
+/* background-color:#F6F6F6;*/
+        background-color: #FFFFFF;
+   margin:0;
+   padding:0;
+    }
+    .bkimg{
+       bottom: 0;
+    height: auto;
+    overflow: hidden;
+    position: absolute;
+    font-family:Raleway;
+    font-weight: bolder;
+    left: 15%;
+    top: 30%;
+/*
+        max-width:100%
+        height:100%;
+*/
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: contain;
+        -webkit-background-size:cover;
+    }
+    .app_logo{
+    left: 45%;
+    top: 22%; 
+    display: inline-block;
+    position: absolute;
+    }
+.warp1 {
+/*border:2px solid #F36C8C;*/
+position:absolute;
+padding:25px;
+right:30%;
+color:black;
+top:30%;
+/*float:inherit;*/
+font-family:Roboto;
+}
+    #hptitle{
+        color: #4885ed;
+        
+    }
+    .wrap1{
+    color: black;
+    font-family: Roboto;
+    left: 30%;
+    padding: 25px;
+    position: relative;
+    right: 0;
+    top: 30%;
+    }
+.okbtn {
+    color: #FFFFFF;
+    margin-right:20px;
+/*	color:greyText;*/
+/*	background-color: #F36C8C;*/
+    background-color: #4885ed;
+	padding: 10px 20px 5px 20px !important;
+	text-align:center;
+	font-weight:bold;
+	clear:both;
+    }
+    .skipbtn{
+        color: #4885ed;
+        background-color:transparent;
+        padding: 10px 20px 5px 20px !important;
+	     text-align:center;
+        
+        border-left: 1px solid;
+        border-left-color: #4885ed;
+        border-left: 10px 50px;
+       
+	font-weight:bold;
+	clear:both;
+    }
+    .colbar_1{
+        background-color: #4885ed;
+       color: #4885ed;
+    }
+    .colbar_2{
+       background-color: #db3236;
+        color:#db3236;
+    }
+    .colbar_3{
+       background-color: #f4c20d;
+        color:#f4c20d;
+    }
+    .colbar_4{
+       background-color: #4885ed     ;
+        color: #4885ed ;
+    }   .colbar_5{
+       background-color:#3cba54;
+        color:#3cba54;
+    }   .colbar_6{
+       background-color: #db3236;
+        color:#db3236;
+    }
+    #subtitle{color: #3cba54;}
+    #subtitle_01{font-family:Raleway; }
+    .bkimg{font-family:Raleway;}
+   
+    
+</style>

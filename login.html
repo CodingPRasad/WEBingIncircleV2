@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<link type="text/css" rel="stylesheet" href="styler.css" />
+		<title>Flex</title>
+</head>
+<body>
+<style>
+body{
+	
+	font-family:Roboto;
+    }
+      .colbar_1{
+        background-color: #4885ed;
+       color: #4885ed;
+    }
+    .colbar_2{
+       background-color: #db3236;
+        color:#db3236;
+    }
+    .colbar_3{
+       background-color: #3cba54;
+        color:#3cba54;
+    }
+    .colbar_4{
+       background-color: #4885ed;
+        color: #4885ed ;
+    }   .colbar_5{
+       background-color: #db3236;
+        color:#db3236;
+    }   .colbar_6{
+       background-color:#f4c20d;  
+        color:#f4c20d;
+    }
+    
+    
+    
+    </style>
+<!--
+    <table class="tbl_layout"  width="100%">
+ <tr>
+    <td class="colbar_1"  width="18%">1</td>
+    <td class="colbar_2" width="15%">2</td>
+     <td class="colbar_3" width="15%">3</td>
+     <td class="colbar_4" width="5%">4</td>
+     <td class="colbar_5" width="10%">4</td>
+     <td class="colbar_6" width="5%">4</td>
+    
+   
+  </tr>
+    </table>
+     
+-->
+<!--
+   
+<div id="head_title">
+    <h1>CR4S</h1></div>
+-->
+<!--      <div id="timestamp"></div>-->
+    
+    <div class="header-container">
+<div id="profile-title"></div>
+        
+        <div id="circle"></div>
+<ul id="menu">
+    <li><a href="#" onclick="toggle('newBill')">New Bill</a></li>
+  <li><a href="#news">Add Stock</a></li>
+  <li><a href="#contact">Report</a></li>
+  <li><a href="#logout" onclick="logout()">Logout</a></li>
+</ul>
+</div>
+<form name="Bill" id="newBill" style="display:none">
+Order ID :<br><input class="textBox" type="text" name="billid" id="order_id" /><br><br>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="#" class="header">A</a></li>
+  <li><a href="#">Adele</a></li>
+  <li><a href="#">Agnes</a></li>
+
+  <li><a href="#" class="header">B</a></li>
+  <li><a href="#">Billy</a></li>
+  <li><a href="#">Bob</a></li>
+
+  <li><a href="#" class="header">C</a></li>
+  <li><a href="#">Calvin</a></li>
+  <li><a href="#">Christina</a></li>
+  <li><a href="#">Cindy</a></li>
+    <p id="error" style="display:none">No result Found!!</p>
+</ul>
+</form>
+    
+    <div class="modal fade" tabindex="-1" role="dialog"  id="mi-modal">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Have you got a new Project?</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" id="modal-btn-si">Yes</button>
+        <button type="button" class="btn btn-primary" id="modal-btn-no">No</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    
+    
+    
+        <script type="text/javascript">
+       window.onload = function() {
+  Session();
+};
+            function Session(){
+                var startSession;
+       var startSession=setTimeout(setSession,50000);
+            }
+            function setSession(){
+            window.location.assign(logoutpage);
+            
+           };
+    history.pushState(null, null, 'index.html');
+    window.addEventListener('popstate', function(event) {
+    history.pushState(null, null, 'storage-events.html');
+    });
+    function toggle(id)
+    {
+       
+       // document.write("CLICKED");
+    var e = document.getElementById(id);
+    if (e.style.display == 'block' || e.style.display =='')
+    {
+        e.style.display = 'none';
+
+    }
+    else 
+    {
+        e.style.display = 'block';
+        getRand();
+    }
+}           
+ var dateTime =  new Date();
+    //document.getElementById("timestamp").innerHTML = dateTime;
+document.getElementById("profile-title").innerHTML= localStorage.getItem("profilename");
+// =============New Bill=================== 
+   var total = 0;
+var  addBill = function() {
+     this.total += itemCost;
+     document.getElementById('NewBillMsg').innerHTML = "New";
+     document.getElementById('itemList').style.display = "block";
+};
+var getRand = function() {
+    var elem= ("PUN" + Math.floor(Math.random()*89999+10000));
+    document.getElementById("order_id").value=elem;
+};
+    
+// =============Todo smart search=================== 
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+        li[i].style.display = "none";
+        document.getElementById("error").style.display="block";
+
+        }
+    }
+}    
+// ===============End of smart search============ 
+    var logoutpage="file:///C:\\Users\\prasadj\\Documents\\Academy\\C_Magic\\index.html" 
+ function logout(){
+     
+   var logoutpage="file:///C:\\Users\\prasadj\\Documents\\Academy\\C_Magic\\index.html" 
+     window.location.assign(logoutpage);
+     window.localStorage.setItem('login',true);
+     window.localStorage.clear();
+ }
+//window.addEventListener('storage', storageChange, false)
+//window.localStorage.setItem('logged_in', false)
+    
+// calculate Total 
+
+////var total = 0;
+//var =addBill = function() {
+//     this.total += itemCost;
+//     document.getElementById('NewBillMsg').innerHTML = "New";
+//     document.getElementById('itemList').style.display = "block";
+//};
+//
+//var scan = function(item, quantity) {
+//                    switch (item) {
+//                case "Eggs":
+//                    this.add(0.98 * quantity);
+//                    break;
+//                case "Milk":
+//                    this.add(1.23 * quantity);
+//                    break;
+//                case "Bread":
+//                    this.add(4.99 * quantity);
+//                    break;
+//                case "chocolate":
+//                    this.add(0.45 * quantity);
+//                    break;  
+//                    }
+//};
+//
+//var askCategory = function() {
+//    document.getElementById('showInDropDown').style.display = "block";
+//    document.getElementById('itemList').style.display='block';
+//};
+</script>
+
+</body>
+
+<html>
