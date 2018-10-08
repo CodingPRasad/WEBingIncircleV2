@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Reverse</title>
+</head>
+
+<body>
+<form title="First_question" >
+<div class="userInput">
+<input type="text" tabindex="1"  id="userInput" placeholder="type any text to reverse"/>
+</div>
+    <button type="submit"   title="Reverse Me" id="sbmt" onclick="reverse()"></button>
+<div id="reverseInput"></div>
+</form>
+
+
+<script type="text/javascript" >
+
+function reverse() {
+    var input=document.getElementById("userInput");
+  var result= input.split().reverse().join();
+  document.getElementById("reverseInput").innerText=result;
+}
+</script>
+</body>
+
+</html>

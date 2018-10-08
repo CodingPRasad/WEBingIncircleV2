@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>C_Magic</title>
+<!--<script type="text/javascript" src="script.js"></script>-->
+<!--<link type="text/css" rel="stylesheet" href="style.css"/>-->
+</head>
+  <body>  
+<form title="login" id=loginFormId name="loginform"   autocomplete="off">
+<input class="textBox" type='text' id="email"   autofocus  required placeholder='Email' size="70"><br>
+<h7 id="eError"></h7><br><br>
+<input class="textBox" type='password' id="password"  required placeholder='Password' size="70"><br><br>
+<h7 id="pError"></h7><br><br>
+<input type="button" id="lgn-btn" title="Click to Login"  onclick="validate()" value="Login" /><br>
+</form>
+     <script type="text/javascript">
+  function validate(){
+//       var valid=true;
+var uemail=document.getElementById("email").value;
+var uname   = uemail.substring(0, uemail.lastIndexOf("@"));
+document.getElementById("eError").innerHTML=uname;
+      
+//var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+//        if (!(uemail.value.match(mailformat))) {
+//          document.getElementById('eError').innerHTML = "*Please Enter valid Email";
+//            valid = false;       
+//            }
+//        return valid;
+//   
+  };
+    </script>
+
+    </body>
+</html>

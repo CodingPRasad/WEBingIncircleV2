@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<head>
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<link type="text/css" rel="stylesheet" href="session.css" />
+		<title>Flex</title>
+</head>
+<body>
+<style>
+body{
+	
+	font-family:Roboto;
+    }
+      .colbar_1{
+        background-color: #4885ed;
+       color: #4885ed;
+    }
+    .colbar_2{
+       background-color: #db3236;
+        color:#db3236;
+    }
+    .colbar_3{
+       background-color: #3cba54;
+        color:#f4c20d;
+    }
+    .colbar_4{
+       background-color: #4885ed;
+        color: #4885ed ;
+    }   .colbar_5{
+       background-color: #db3236;
+        color:#3cba54;
+    }   .colbar_6{
+       background-color:#f4c20d;  
+        color:#db3236;
+    }
+    
+    
+    
+    </style>
+    <table class="tbl_layout"  width="100%">
+ <tr>
+    <td class="colbar_1"  width="18%">1</td>
+    <td class="colbar_2" width="15%">2</td>
+     <td class="colbar_3" width="15%">3</td>
+     <td class="colbar_4" width="5%">4</td>
+     <td class="colbar_5" width="10%">4</td>
+     <td class="colbar_6" width="5%">4</td>
+    
+   
+  </tr>
+    </table>
+     
+<!--
+   
+<div id="head_title">
+    <h1>CR4S</h1></div>
+-->
+<!--      <div id="timestamp"></div>-->
+    
+    <div class="header-container">
+       
+        <div id="profile-title"> 
+         <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+        
+        
+        </div><div id="circle"></div>
+<ul id="menu">
+<!--    <li><a href="#" onclick="toggle('newBill')">New Bill</a></li>-->
+    <li><a href="#">New Bill</a></li>
+  <li><a href="#">Add Stock</a></li>
+  <li><a href="#">Report</a></li>
+  <li><a href="#">Logout</a></li>
+</ul>
+</div>
+    <div id="sessionError"></div>
+<div class="new-user">
+    <h1 id="signin-header">Sign in to C4RS </h1>
+    <p class="signindata">Enter your <strong>Email</strong> and <strong>password</strong></p>
+    <form title="newlogin" class="login">
+<input id="user_login" autocomplete="off" value="" placeholder="Email or username" name="user[login]"><br><br>
+<input id="user_password"  type="password" data-reactid="12" autocomplete="off" value="" placeholder="Password" name="user[password]"><br><br>
+
+<!--<p>Forgot password?</p>-->
+<input id="user_submit" class='button-commit' type="submit" data-reactid="16" value="Log in" name="commit">
+</form><br>
+    <p id="forgot_pass">Forgot password?</p>
+    </div>
+    <div class="contact_message">
+    <p class="contact_msg">Trouble in login to your account? drop a email to us at <strong>contact@c4rs.com</strong></p>
+    </div>
+    
+ <script type="text/javascript">
+  
+    history.pushState(null, null, 'index.html');
+    window.addEventListener('popstate', function(event) {
+    history.pushState(null, null, 'storage-events.html');
+    });
+  var SessionError= document.getElementById('sessionError').innerHTML= "Hey "  + localStorage.getItem("profilename") +  " <br><br>Due to security reasons, you have been logged out.Please login again to continue.";
+    function toggle(id)
+    {
+       
+       // document.write("CLICKED");
+    var e = document.getElementById(id);
+    if (e.style.display == 'block' || e.style.display =='')
+    {
+        e.style.display = 'none';
+
+    }
+    else 
+    {
+        e.style.display = 'block';
+        getRand();
+    }
+}           
+ var dateTime =  new Date();
+    //document.getElementById("timestamp").innerHTML = dateTime;
+document.getElementById("profile-title").innerHTML= localStorage.getItem("profilename");
+// =============New Bill==================
+   var total = 0;
+var  addBill = function() {
+     this.total += itemCost;
+     document.getElementById('NewBillMsg').innerHTML = "New";
+     document.getElementById('itemList').style.display = "block";
+};
+var getRand = function() {
+    var elem= ("PUN" + Math.floor(Math.random()*89999+10000));
+    document.getElementById("order_id").value=elem;
+};
+    
+// =============Todo smart search=================== 
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+        li[i].style.display = "none";
+        document.getElementById("error").style.display="block";
+
+        }
+    }
+}    
+// ===============End of smart search============ 
+    var logoutpage="file:///C:\\Users\\prasadj\\Documents\\Academy\\C_Magic\\sessionOut.html" 
+ function logout(){
+   var logoutpage="file:///C:\\Users\\prasadj\\Documents\\Academy\\Flex\\Thankyou.html" 
+     window.location.assign(logoutpage);
+     window.localStorage.setItem('login',true);
+ }
+//window.addEventListener('storage', storageChange, false)
+//window.localStorage.setItem('logged_in', false)
+    
+// calculate Total 
+
+////var total = 0;
+//var =addBill = function() {
+//     this.total += itemCost;
+//     document.getElementById('NewBillMsg').innerHTML = "New";
+//     document.getElementById('itemList').style.display = "block";
+//};
+//
+//var scan = function(item, quantity) {
+//                    switch (item) {
+//                case "Eggs":
+//                    this.add(0.98 * quantity);
+//                    break;
+//                case "Milk":
+//                    this.add(1.23 * quantity);
+//                    break;
+//                case "Bread":
+//                    this.add(4.99 * quantity);
+//                    break;
+//                case "chocolate":
+//                    this.add(0.45 * quantity);
+//                    break;  
+//                    }
+//};
+//
+//var askCategory = function() {
+//    document.getElementById('showInDropDown').style.display = "block";
+//    document.getElementById('itemList').style.display='block';
+//};
+</script>
+
+</body>
+
+<html>
